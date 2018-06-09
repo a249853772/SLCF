@@ -13,7 +13,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @ServletComponentScan
 @ComponentScan(value={"com.*"})
-@EntityScan("com.**.pojo")  
+@EntityScan("com.*")  
 public class Application extends SpringBootServletInitializer{
 	
 	
