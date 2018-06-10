@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.huhao.springboot.dao.CategoryDAO;
+import com.huhao.springboot.exceptionHandler.MyException;
 import com.huhao.springboot.pojo.Category;
-import com.huhao.springboot.pojo.PojoPage;
 
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -76,6 +76,12 @@ public class CagtegoryController {
     public String deleteUser(@PathVariable int id) {
         categoryDAO.delete(id);
         return "success";
+    }
+	
+	@ApiOperation(value="测试异常", notes="")
+	@RequestMapping(value="/json",method = RequestMethod.GET)
+    public String json() throws MyException {
+        throw new MyException("发生错误2");
     }
 	
 }

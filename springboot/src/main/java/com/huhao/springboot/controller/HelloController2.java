@@ -12,7 +12,17 @@ public class HelloController2 {
         // 加入一个属性，用来在模板中读取
         map.addAttribute("host", "http://blog.didispace.com");
         // return模板文件的名称，对应src/main/resources/templates/index.html
-        return "index";  
+        return "SpringSecurity/index";  
+    }
+	
+	@RequestMapping("/hello")
+    public String hello() {
+        return "SpringSecurity/hello";
+    }
+	
+	@RequestMapping("/login")
+    public String login() {
+        return "SpringSecurity/login";
     }
 
 }
