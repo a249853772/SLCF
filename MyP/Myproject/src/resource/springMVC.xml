@@ -23,11 +23,27 @@
     <mvc:default-servlet-handler />
  
     <!-- 视图定位 -->
-    <bean
+   <!--  <bean
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass"
             value="org.springframework.web.servlet.view.JstlView" />
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
-    </bean>
+    </bean> -->
+    <!-- 定义HTML文件的位置 -->  
+     <bean id="htmlviewResolver"    
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">   
+        <property name="viewClass" value="com.sys.ssm.system.config.HtmlResourceView"/>  
+        <property name="order" value="0" />  
+        <property name="prefix" value="/html/"/>  
+        <property name="suffix" value=".html" />    
+        <property name="contentType" value="text/html;charset=UTF-8"></property>    
+    </bean>  
+    <!-- 定义JSP文件的位置 -->  
+    <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+        <property name="order" value="1" />  
+        <property name="prefix" value="/jsp/"/>  
+        <property name="suffix" value=".jsp"/>  
+    </bean>  
+    
 </beans>
