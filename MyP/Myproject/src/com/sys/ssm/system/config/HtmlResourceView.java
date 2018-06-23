@@ -3,8 +3,9 @@ package com.sys.ssm.system.config;
 import java.io.File;
 import java.util.Locale;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.view.InternalResourceView;
-
+@Component
 public class HtmlResourceView extends InternalResourceView{
 	
 	@Override  
