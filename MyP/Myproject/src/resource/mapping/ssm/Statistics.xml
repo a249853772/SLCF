@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="com.sys.ssm.system.dao.StatisticsMapper">
+    
+    	<insert id="insert" parameterType="com.sys.ssm.system.entity.Statistics">
+    		INSERT INTO statistics(visitors,createTime) VALUES (#{visitors},NOW())
+    	</insert>
+    
+    	<select id="select" resultType="com.sys.ssm.system.entity.Statistics">
+    		SELECT visitors FROM statistics WHERE createTime = (SELECT MAX(createTime) FROM statistics )
+    	</select>
+    	
+    	<update id="update">
+    		UPDATE statistics,(SELECT MAX(createTime) as maxTime  FROM statistics) ms 
+    		SET visitors = #{visitors},updateTime = NOW() where createTime =  ms.maxTime
+    	</update>
+    </mapper>
