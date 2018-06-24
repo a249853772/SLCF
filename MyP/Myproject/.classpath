@@ -34,6 +34,8 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-tx-3.2.16.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-web-3.2.16.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-webmvc-3.2.16.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jjwt-0.6.0.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-codec-1.10.jar"/>
 	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.generic_7.0">
 		<attributes>
 			<attribute name="owner.project.facets" value="jst.web"/>

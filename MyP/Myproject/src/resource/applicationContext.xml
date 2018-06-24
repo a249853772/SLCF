@@ -14,20 +14,20 @@
      
    <context:annotation-config />
     <context:component-scan base-package="com.sys.ssm.system.service" />
- 
+ 	<context:component-scan base-package="com.sys.ssm.system.utils" />
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
       <property name="driverClassName"> 
           <value>com.mysql.jdbc.Driver</value> 
       </property> 
       <property name="url"> 
-          <value>jdbc:mysql://127.0.0.1:14472/test?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true</value> 
-     
+          <!-- <value>jdbc:mysql://g21053b838.51mypc.cn:10996/test?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true</value> --> 
+     	  <value>jdbc:mysql://localhost:3306/test?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true</value>
       </property> 
       <property name="username"> 
-          <value>root</value> 
+          <value>admin</value> 
       </property> 
       <property name="password"> 
-          <value>root</value> 
+          <value>admin</value> 
       </property>    
     </bean>
      
